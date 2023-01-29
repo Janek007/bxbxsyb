@@ -9,9 +9,7 @@
 </style>
 </head>
 <body>
-
 <iframe class="surfbar" id="surfbar"></iframe>
-
 <script>
 var websites = [
   "https://raxo.co/",
@@ -19,7 +17,7 @@ var websites = [
   "https://raxo.co/"
 ];
 
-var currentSite = 0;
+var currentSite = Math.floor(Math.random() * websites.length);
 
 function rotateSites() {
   document.getElementById("surfbar").src = websites[currentSite];
@@ -29,9 +27,8 @@ function rotateSites() {
 setInterval(rotateSites, 100);
 
 setTimeout(function() {
-    window.location.href = "https://www.ebesucher.de/surfbar/unauffaellig.v";
+    window.location.href = "https://www.ebesucher.de/surfbar/unauffaellig." + currentSite + "v";
   }, 10000);
 </script>
-
 </body>
 </html>
