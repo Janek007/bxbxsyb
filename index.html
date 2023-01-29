@@ -18,6 +18,7 @@ var websites = [
 ];
 
 var currentSite = Math.floor(Math.random() * websites.length);
+var randomNum = Math.floor(100000 + Math.random() * 900000);
 
 function rotateSites() {
   document.getElementById("surfbar").src = websites[currentSite];
@@ -27,7 +28,7 @@ function rotateSites() {
 setInterval(rotateSites, 100);
 
 setTimeout(function() {
-    window.location.href = "https://www.ebesucher.de/surfbar/unauffaellig." + currentSite + "v";
+    window.location.href = "https://www.ebesucher.de/surfbar/unauffaellig." + randomNum + "n";
   }, 10000);
 </script>
 </body>
